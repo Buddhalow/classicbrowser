@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassicBrowser", "ClassicBrowser\ClassicBrowser.csproj", "{D2769DC4-BB1F-44E1-A28E-EF2C8B63DDAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsUtilities", "..\..\..\Downloads\rebarcontrol_src\RebarSrc\WindowsUtilities\WindowsUtilities.csproj", "{A1D7AF7F-6F76-4289-8142-282BCAC53BAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RebarDotNet", "..\..\..\Downloads\rebarcontrol_src\RebarSrc\RebarDotNet\RebarDotNet.csproj", "{2323ABD0-509B-4180-BC31-7BD57053CE86}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2769DC4-BB1F-44E1-A28E-EF2C8B63DDAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2769DC4-BB1F-44E1-A28E-EF2C8B63DDAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2769DC4-BB1F-44E1-A28E-EF2C8B63DDAE}.Debug|x64.ActiveCfg = Debug|x64
+		{D2769DC4-BB1F-44E1-A28E-EF2C8B63DDAE}.Debug|x64.Build.0 = Debug|x64
+		{D2769DC4-BB1F-44E1-A28E-EF2C8B63DDAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2769DC4-BB1F-44E1-A28E-EF2C8B63DDAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2769DC4-BB1F-44E1-A28E-EF2C8B63DDAE}.Release|x64.ActiveCfg = Release|x64
+		{D2769DC4-BB1F-44E1-A28E-EF2C8B63DDAE}.Release|x64.Build.0 = Release|x64
+		{A1D7AF7F-6F76-4289-8142-282BCAC53BAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1D7AF7F-6F76-4289-8142-282BCAC53BAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1D7AF7F-6F76-4289-8142-282BCAC53BAC}.Debug|x64.ActiveCfg = Debug|x64
+		{A1D7AF7F-6F76-4289-8142-282BCAC53BAC}.Debug|x64.Build.0 = Debug|x64
+		{A1D7AF7F-6F76-4289-8142-282BCAC53BAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1D7AF7F-6F76-4289-8142-282BCAC53BAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1D7AF7F-6F76-4289-8142-282BCAC53BAC}.Release|x64.ActiveCfg = Release|x64
+		{A1D7AF7F-6F76-4289-8142-282BCAC53BAC}.Release|x64.Build.0 = Release|x64
+		{2323ABD0-509B-4180-BC31-7BD57053CE86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2323ABD0-509B-4180-BC31-7BD57053CE86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2323ABD0-509B-4180-BC31-7BD57053CE86}.Debug|x64.ActiveCfg = Debug|x64
+		{2323ABD0-509B-4180-BC31-7BD57053CE86}.Debug|x64.Build.0 = Debug|x64
+		{2323ABD0-509B-4180-BC31-7BD57053CE86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2323ABD0-509B-4180-BC31-7BD57053CE86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2323ABD0-509B-4180-BC31-7BD57053CE86}.Release|x64.ActiveCfg = Release|x64
+		{2323ABD0-509B-4180-BC31-7BD57053CE86}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ACBFFB98-279F-4A01-A951-DE3C6F61B54C}
+	EndGlobalSection
+EndGlobal
