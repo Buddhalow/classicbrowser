@@ -20,7 +20,6 @@ namespace ClassicBrowser
         {
             InitializeComponent();
             this.Resize += Form1_Resize;
-            favoriteManager = new FavoriteManager();
             Init();
             Pack();
         }
@@ -133,7 +132,13 @@ namespace ClassicBrowser
             webBrowser.GetBrowser().GoBack();
         }
 
-        private FavoriteManager favoriteManager;
+        public FavoriteManager Favorites
+        {
+            get
+            {
+                return FavoriteManager.FavoritesManager;
+            }
+        }
      
         public string FavoritesFile
         {
@@ -146,30 +151,12 @@ namespace ClassicBrowser
 
         private void SaveFavorites()
         {
-            using (StreamWriter sw = new StreamWriter(FavoritesFile))
-            {
-                DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(FavoriteManager));
-                ser.WriteObject(sw.BaseStream, favoriteManager);
-            }
+            FavoriteManager.Save();
         }
 
         private void LoadFavorites()
         {
-            favoriteManager = new FavoriteManager();
-            if (File.Exists(FavoritesFile))
-            {
-                try
-                {
-                    using (StreamReader sr = new StreamReader(FavoritesFile))
-                    {
-                        DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(FavoriteManager));
-                        favoriteManager = (FavoriteManager)ser.ReadObject(sr.BaseStream);
-                    }
-                } catch (Exception e)
-                {
-
-                }
-            }
+            FavoriteManager.Load();
         }
         private void RenderFavoriteMenu(ToolStripDropDownItem item)
         {
@@ -178,13 +165,21 @@ namespace ClassicBrowser
             ToolStripItem addToFavoritesItem = item.DropDownItems.Add("Add to favorites");
             addToFavoritesItem.Click += AddToFavoritesItem_Click;
             ToolStripItem organizeFavoritesItem = item.DropDownItems.Add("Organize favorites");
+            organizeFavoritesItem.Click += OrganizeFavoritesItem_Click;
             item.DropDownItems.Add("-");
-            foreach(Favorite favorite in favoriteManager.Favorites)
+            foreach(Favorite favorite in FavoriteManager.FavoritesManager.Favorites)
             {
                 ToolStripItem favoriteItem = item.DropDownItems.Add(favorite.Name);
                 favoriteItem.Tag = favorite;
                 favoriteItem.Click += FavoriteItem_Click;
             }
+        }
+
+        private void OrganizeFavoritesItem_Click(object sender, EventArgs e)
+        {
+            ManageFavoritesForm manageFavoritesForm = new ManageFavoritesForm();
+            manageFavoritesForm.ShowDialog();
+            RenderFavoriteMenus();
         }
 
         private void RenderFavoriteToolStrip(ToolStrip item)
@@ -195,7 +190,7 @@ namespace ClassicBrowser
             favoritesToolStripLabel.Font = new Font(favoritesToolStripLabel.Font, FontStyle.Bold);
             item.Items.Add(favoritesToolStripLabel);
            
-            foreach (Favorite favorite in favoriteManager.Favorites)
+            foreach (Favorite favorite in FavoriteManager.FavoritesManager.Favorites)
             {
                 ToolStripItem favoriteItem = item.Items.Add(favorite.Name);
                 favoriteItem.Tag = favorite;
@@ -227,7 +222,7 @@ namespace ClassicBrowser
             };
             if (favoriteForm.ShowDialog() == DialogResult.OK) {
                 Favorite favorite = favoriteForm.Favorite;
-                favoriteManager.Favorites.Add(favorite);
+                FavoriteManager.FavoritesManager.Favorites.Add(favorite);
                 SaveFavorites();
                 RenderFavoriteMenus();
             }
@@ -247,6 +242,7 @@ namespace ClassicBrowser
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
         }
 
         private void webBrowser1_MarginChanged(object sender, EventArgs e)
