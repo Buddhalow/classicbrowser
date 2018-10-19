@@ -188,3 +188,6 @@ C:\Users\Alecca\Documents\Apps\ClassicBrowser\ClassicBrowser\bin\Debug\CefSharp.
 C:\Users\Alecca\Documents\Apps\ClassicBrowser\ClassicBrowser\bin\Debug\CefSharp.xml
 C:\Users\Alecca\Documents\Apps\ClassicBrowser\ClassicBrowser\bin\Debug\CefSharp.Core.pdb
 C:\Users\Alecca\Documents\Apps\ClassicBrowser\ClassicBrowser\bin\Debug\CefSharp.Core.xml
+C:\Users\Alecca\Documents\Apps\ClassicBrowser\ClassicBrowser\obj\Debug\ClassicBrowser.ClassicBrowserXP.resources
+C:\Users\Alecca\Documents\Apps\ClassicBrowser\ClassicBrowser\obj\Debug\ClassicBrowser.FavoriteForm.resources
+C:\Users\Alecca\Documents\Apps\ClassicBrowser\ClassicBrowser\obj\Debug\ClassicBrowser.ManageFavoritesForm.resources

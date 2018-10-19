@@ -42,12 +42,14 @@ namespace ClassicBrowser
             webBrowser = new ChromiumWebBrowser(StartUrl);
             webBrowser.TitleChanged += WebBrowser_TitleChanged;
             webBrowser.AddressChanged += WebBrowser_AddressChanged;
-            this.toolStripContainer1.ContentPanel.Controls.Add(webBrowser);
+            this.splitContainer1.Panel1Collapsed = true;
+            
+            this.splitContainer1.Panel2.Controls.Add(webBrowser);
             webBrowser.Dock = DockStyle.Fill;
             webBrowser.LoadingStateChanged += WebBrowser_LoadingStateChanged;
             webBrowser.FrameLoadStart += WebBrowser_FrameLoadStart;
             webBrowser.LifeSpanHandler = new ClassicBrowserLifeSpanHandler();
-
+         
             LoadFavorites();
             RenderFavoriteMenus();
         }
@@ -80,6 +82,8 @@ namespace ClassicBrowser
         }
 
         private ChromiumWebBrowser webBrowser;
+        private ChromiumWebBrowser sideBrowser;
+
         public ClassicBrowser(String url) : this()
         {
             webBrowser.Load(url);
@@ -342,6 +346,34 @@ namespace ClassicBrowser
         private void favoritesToolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+        private void LoadSideBrowser(string url)
+        {
+            if (sideBrowser == null)
+            {
+                sideBrowser = new ChromiumWebBrowser("http://m.google.se");
+                sideBrowser.LifeSpanHandler = new ClassicBrowserLifeSpanHandler();
+                splitContainer1.Panel1.Controls.Add(sideBrowser);
+                sideBrowser.Dock = DockStyle.Fill;
+
+            }
+            else
+            {
+                sideBrowser.Load("http://google.se");
+            }
+            this.splitContainer1.Panel1Collapsed = false;
+        }
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            if (toolStripButton6.Checked)
+            {
+                toolStripButton6.Checked = false;
+                splitContainer1.Panel1Collapsed = true;
+                return;
+            }
+            toolStripButton6.Checked = true;
+            LoadSideBrowser("http://google.se");
+            
         }
     }
 }

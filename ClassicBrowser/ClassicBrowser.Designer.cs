@@ -39,21 +39,7 @@
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.AddressBar = new System.Windows.Forms.ToolStripComboBox();
-            this.btnGo = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.favoritesButton = new System.Windows.Forms.ToolStripDropDownButton();
-            this.addToFavoritesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.organizeFavoritesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nyttFönsterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,15 +62,33 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripProgressBar2 = new System.Windows.Forms.ToolStripProgressBar();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.favoritesToolStrip = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.favoritesButton = new System.Windows.Forms.ToolStripDropDownButton();
+            this.addToFavoritesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.organizeFavoritesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
+            this.btnGo = new System.Windows.Forms.ToolStripButton();
             this.toolStrip2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
+            this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.SuspendLayout();
             this.favoritesToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -178,15 +182,6 @@
             this.AddressBar.Size = new System.Drawing.Size(575, 25);
             this.AddressBar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AddressBar_KeyDown);
             // 
-            // btnGo
-            // 
-            this.btnGo.Image = global::ClassicBrowser.Properties.Resources.Forward;
-            this.btnGo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnGo.Name = "btnGo";
-            this.btnGo.Size = new System.Drawing.Size(40, 22);
-            this.btnGo.Text = "Go";
-            this.btnGo.Click += new System.EventHandler(this.btnGo_Click);
-            // 
             // toolStrip1
             // 
             this.toolStrip1.BackColor = System.Drawing.SystemColors.Control;
@@ -210,145 +205,6 @@
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "Back";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Image = global::ClassicBrowser.Properties.Resources.Back;
-            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
-            this.toolStripButton1.Size = new System.Drawing.Size(60, 49);
-            this.toolStripButton1.Text = "Back";
-            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Image = global::ClassicBrowser.Properties.Resources.Forward;
-            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
-            this.toolStripButton2.Size = new System.Drawing.Size(75, 49);
-            this.toolStripButton2.Text = "Forward";
-            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.Image = global::ClassicBrowser.Properties.Resources.Stop;
-            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
-            this.toolStripButton3.Size = new System.Drawing.Size(60, 49);
-            this.toolStripButton3.Text = "Stop";
-            this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
-            // 
-            // toolStripButton4
-            // 
-            this.toolStripButton4.Image = global::ClassicBrowser.Properties.Resources.Refresh;
-            this.toolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
-            this.toolStripButton4.Size = new System.Drawing.Size(73, 49);
-            this.toolStripButton4.Text = "Refresh";
-            this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
-            // 
-            // toolStripButton5
-            // 
-            this.toolStripButton5.Image = global::ClassicBrowser.Properties.Resources.Home;
-            this.toolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
-            this.toolStripButton5.Size = new System.Drawing.Size(62, 49);
-            this.toolStripButton5.Text = "Home";
-            this.toolStripButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
-            // 
-            // favoritesButton
-            // 
-            this.favoritesButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addToFavoritesToolStripMenuItem,
-            this.organizeFavoritesToolStripMenuItem,
-            this.toolStripSeparator1});
-            this.favoritesButton.Image = global::ClassicBrowser.Properties.Resources.Favorites;
-            this.favoritesButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.favoritesButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.favoritesButton.Name = "favoritesButton";
-            this.favoritesButton.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
-            this.favoritesButton.Size = new System.Drawing.Size(89, 49);
-            this.favoritesButton.Text = "Favorites";
-            this.favoritesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.favoritesButton.Click += new System.EventHandler(this.favoritesButton_Click);
-            // 
-            // addToFavoritesToolStripMenuItem
-            // 
-            this.addToFavoritesToolStripMenuItem.Name = "addToFavoritesToolStripMenuItem";
-            this.addToFavoritesToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-            this.addToFavoritesToolStripMenuItem.Text = "Add to Favorites";
-            // 
-            // organizeFavoritesToolStripMenuItem
-            // 
-            this.organizeFavoritesToolStripMenuItem.Name = "organizeFavoritesToolStripMenuItem";
-            this.organizeFavoritesToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-            this.organizeFavoritesToolStripMenuItem.Text = "Organize favorites";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(160, 6);
-            // 
-            // toolStripLabel2
-            // 
-            this.toolStripLabel2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripLabel2.BackColor = System.Drawing.Color.Black;
-            this.toolStripLabel2.Image = global::ClassicBrowser.Properties.Resources.Vendor;
-            this.toolStripLabel2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
-            this.toolStripLabel2.Size = new System.Drawing.Size(52, 49);
-            this.toolStripLabel2.Click += new System.EventHandler(this.toolStripLabel2_Click);
-            // 
-            // toolStripButton6
-            // 
-            this.toolStripButton6.Image = global::ClassicBrowser.Properties.Resources.Search;
-            this.toolStripButton6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
-            this.toolStripButton6.Size = new System.Drawing.Size(68, 49);
-            this.toolStripButton6.Text = "Search";
-            this.toolStripButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // toolStripButton7
-            // 
-            this.toolStripButton7.Image = global::ClassicBrowser.Properties.Resources.Print;
-            this.toolStripButton7.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
-            this.toolStripButton7.Size = new System.Drawing.Size(60, 49);
-            this.toolStripButton7.Text = "Print";
-            this.toolStripButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton7.ToolTipText = "Print";
-            this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
-            // 
-            // toolStripButton8
-            // 
-            this.toolStripButton8.Image = global::ClassicBrowser.Properties.Resources.Fonts;
-            this.toolStripButton8.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton8.Name = "toolStripButton8";
-            this.toolStripButton8.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
-            this.toolStripButton8.Size = new System.Drawing.Size(62, 49);
-            this.toolStripButton8.Text = "Fonts";
-            this.toolStripButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // menuStrip1
             // 
@@ -484,6 +340,7 @@
             // 
             // toolStripContainer1.ContentPanel
             // 
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.splitContainer1);
             this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(800, 302);
             this.toolStripContainer1.ContentPanel.Load += new System.EventHandler(this.toolStripContainer1_ContentPanel_Load);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -540,6 +397,15 @@
             this.toolStripProgressBar2.Name = "toolStripProgressBar2";
             this.toolStripProgressBar2.Size = new System.Drawing.Size(100, 16);
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Size = new System.Drawing.Size(800, 302);
+            this.splitContainer1.SplitterDistance = 266;
+            this.splitContainer1.TabIndex = 0;
+            // 
             // favoritesToolStrip
             // 
             this.favoritesToolStrip.Dock = System.Windows.Forms.DockStyle.None;
@@ -562,13 +428,162 @@
             this.toolStripLabel3.Size = new System.Drawing.Size(60, 22);
             this.toolStripLabel3.Text = "Favorites";
             // 
-            // ClassicBrowser
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = global::ClassicBrowser.Properties.Resources.Back;
+            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.toolStripButton1.Size = new System.Drawing.Size(60, 49);
+            this.toolStripButton1.Text = "Back";
+            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Image = global::ClassicBrowser.Properties.Resources.Forward;
+            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.toolStripButton2.Size = new System.Drawing.Size(75, 49);
+            this.toolStripButton2.Text = "Forward";
+            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.Image = global::ClassicBrowser.Properties.Resources.Stop;
+            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.toolStripButton3.Size = new System.Drawing.Size(60, 49);
+            this.toolStripButton3.Text = "Stop";
+            this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.Image = global::ClassicBrowser.Properties.Resources.Refresh;
+            this.toolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.toolStripButton4.Size = new System.Drawing.Size(73, 49);
+            this.toolStripButton4.Text = "Refresh";
+            this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
+            // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.Image = global::ClassicBrowser.Properties.Resources.Home;
+            this.toolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.toolStripButton5.Size = new System.Drawing.Size(62, 49);
+            this.toolStripButton5.Text = "Home";
+            this.toolStripButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
+            // 
+            // favoritesButton
+            // 
+            this.favoritesButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addToFavoritesToolStripMenuItem,
+            this.organizeFavoritesToolStripMenuItem,
+            this.toolStripSeparator1});
+            this.favoritesButton.Image = global::ClassicBrowser.Properties.Resources.Favorites;
+            this.favoritesButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.favoritesButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.favoritesButton.Name = "favoritesButton";
+            this.favoritesButton.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.favoritesButton.Size = new System.Drawing.Size(89, 49);
+            this.favoritesButton.Text = "Favorites";
+            this.favoritesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.favoritesButton.Click += new System.EventHandler(this.favoritesButton_Click);
+            // 
+            // addToFavoritesToolStripMenuItem
+            // 
+            this.addToFavoritesToolStripMenuItem.Name = "addToFavoritesToolStripMenuItem";
+            this.addToFavoritesToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.addToFavoritesToolStripMenuItem.Text = "Add to Favorites";
+            // 
+            // organizeFavoritesToolStripMenuItem
+            // 
+            this.organizeFavoritesToolStripMenuItem.Name = "organizeFavoritesToolStripMenuItem";
+            this.organizeFavoritesToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.organizeFavoritesToolStripMenuItem.Text = "Organize favorites";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(160, 6);
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabel2.BackColor = System.Drawing.Color.Black;
+            this.toolStripLabel2.Image = global::ClassicBrowser.Properties.Resources.Vendor;
+            this.toolStripLabel2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.toolStripLabel2.Size = new System.Drawing.Size(52, 49);
+            this.toolStripLabel2.Click += new System.EventHandler(this.toolStripLabel2_Click);
+            // 
+            // toolStripButton6
+            // 
+            this.toolStripButton6.Image = global::ClassicBrowser.Properties.Resources.Search;
+            this.toolStripButton6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.toolStripButton6.Size = new System.Drawing.Size(68, 49);
+            this.toolStripButton6.Text = "Search";
+            this.toolStripButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
+            // 
+            // toolStripButton7
+            // 
+            this.toolStripButton7.Image = global::ClassicBrowser.Properties.Resources.Print;
+            this.toolStripButton7.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton7.Name = "toolStripButton7";
+            this.toolStripButton7.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.toolStripButton7.Size = new System.Drawing.Size(60, 49);
+            this.toolStripButton7.Text = "Print";
+            this.toolStripButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton7.ToolTipText = "Print";
+            this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
+            // 
+            // toolStripButton8
+            // 
+            this.toolStripButton8.Image = global::ClassicBrowser.Properties.Resources.Fonts;
+            this.toolStripButton8.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton8.Name = "toolStripButton8";
+            this.toolStripButton8.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.toolStripButton8.Size = new System.Drawing.Size(62, 49);
+            this.toolStripButton8.Text = "Fonts";
+            this.toolStripButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // btnGo
+            // 
+            this.btnGo.Image = global::ClassicBrowser.Properties.Resources.Forward;
+            this.btnGo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnGo.Name = "btnGo";
+            this.btnGo.Size = new System.Drawing.Size(40, 22);
+            this.btnGo.Text = "Go";
+            this.btnGo.Click += new System.EventHandler(this.btnGo_Click);
+            // 
+            // ClassicBrowserXP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.toolStripContainer1);
-            this.Name = "ClassicBrowser";
+            this.Name = "ClassicBrowserXP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Web Browser";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -581,12 +596,15 @@
             this.menuStrip1.PerformLayout();
             this.toolStripContainer1.BottomToolStripPanel.ResumeLayout(false);
             this.toolStripContainer1.BottomToolStripPanel.PerformLayout();
+            this.toolStripContainer1.ContentPanel.ResumeLayout(false);
             this.toolStripContainer1.TopToolStripPanel.ResumeLayout(false);
             this.toolStripContainer1.TopToolStripPanel.PerformLayout();
             this.toolStripContainer1.ResumeLayout(false);
             this.toolStripContainer1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.favoritesToolStrip.ResumeLayout(false);
             this.favoritesToolStrip.PerformLayout();
             this.ResumeLayout(false);
@@ -643,6 +661,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem öppnaToolStripMenuItem;
         private System.Windows.Forms.ToolStripLabel toolStripLabel3;
+        private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }
 

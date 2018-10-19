@@ -99,3 +99,4 @@ C:\Users\Alecca\Documents\Apps\ClassicBrowser\ClassicBrowser\obj\x64\Debug\Class
 C:\Users\Alecca\Documents\Apps\ClassicBrowser\ClassicBrowser\obj\x64\Debug\ClassicBrowser.pdb
 C:\Users\Alecca\Documents\Apps\ClassicBrowser\ClassicBrowser\obj\x64\Debug\ClassicBrowser.FavoriteForm.resources
 C:\Users\Alecca\Documents\Apps\ClassicBrowser\ClassicBrowser\obj\x64\Debug\ClassicBrowser.ManageFavoritesForm.resources
+C:\Users\Alecca\Documents\Apps\ClassicBrowser\ClassicBrowser\obj\x64\Debug\ClassicBrowser.ClassicBrowserXP.resources
