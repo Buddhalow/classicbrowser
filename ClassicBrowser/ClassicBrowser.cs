@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,6 +20,7 @@ namespace ClassicBrowser
         {
             InitializeComponent();
             this.Resize += Form1_Resize;
+            favoriteManager = new FavoriteManager();
             Init();
             Pack();
         }
@@ -45,6 +48,9 @@ namespace ClassicBrowser
             webBrowser.LoadingStateChanged += WebBrowser_LoadingStateChanged;
             webBrowser.FrameLoadStart += WebBrowser_FrameLoadStart;
             webBrowser.LifeSpanHandler = new ClassicBrowserLifeSpanHandler();
+
+            LoadFavorites();
+            RenderFavoriteMenus();
         }
 
         private void WebBrowser_FrameLoadStart(object sender, CefSharp.FrameLoadStartEventArgs e)
@@ -70,6 +76,7 @@ namespace ClassicBrowser
             Invoke((MethodInvoker)delegate
             {
                 Text = e.Title + " - Web Browser Provided by Buddhalow";
+                CurrentTitle = e.Title;
             });
         }
 
@@ -124,6 +131,112 @@ namespace ClassicBrowser
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             webBrowser.GetBrowser().GoBack();
+        }
+
+        private FavoriteManager favoriteManager;
+     
+        public string FavoritesFile
+        {
+            get
+            {
+                return Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Favorites.json";
+
+            }
+        }
+
+        private void SaveFavorites()
+        {
+            using (StreamWriter sw = new StreamWriter(FavoritesFile))
+            {
+                DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(FavoriteManager));
+                ser.WriteObject(sw.BaseStream, favoriteManager);
+            }
+        }
+
+        private void LoadFavorites()
+        {
+            favoriteManager = new FavoriteManager();
+            if (File.Exists(FavoritesFile))
+            {
+                try
+                {
+                    using (StreamReader sr = new StreamReader(FavoritesFile))
+                    {
+                        DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(FavoriteManager));
+                        favoriteManager = (FavoriteManager)ser.ReadObject(sr.BaseStream);
+                    }
+                } catch (Exception e)
+                {
+
+                }
+            }
+        }
+        private void RenderFavoriteMenu(ToolStripDropDownItem item)
+        {
+            
+            item.DropDownItems.Clear();
+            ToolStripItem addToFavoritesItem = item.DropDownItems.Add("Add to favorites");
+            addToFavoritesItem.Click += AddToFavoritesItem_Click;
+            ToolStripItem organizeFavoritesItem = item.DropDownItems.Add("Organize favorites");
+            item.DropDownItems.Add("-");
+            foreach(Favorite favorite in favoriteManager.Favorites)
+            {
+                ToolStripItem favoriteItem = item.DropDownItems.Add(favorite.Name);
+                favoriteItem.Tag = favorite;
+                favoriteItem.Click += FavoriteItem_Click;
+            }
+        }
+
+        private void RenderFavoriteToolStrip(ToolStrip item)
+        {
+
+            item.Items.Clear();
+            ToolStripLabel favoritesToolStripLabel = new ToolStripLabel("Favorites");
+            favoritesToolStripLabel.Font = new Font(favoritesToolStripLabel.Font, FontStyle.Bold);
+            item.Items.Add(favoritesToolStripLabel);
+           
+            foreach (Favorite favorite in favoriteManager.Favorites)
+            {
+                ToolStripItem favoriteItem = item.Items.Add(favorite.Name);
+                favoriteItem.Tag = favorite;
+                favoriteItem.Click += FavoriteItem_Click;
+                favoriteItem.TextImageRelation = TextImageRelation.ImageBeforeText;
+                favoriteItem.DisplayStyle = ToolStripItemDisplayStyle.ImageAndText;
+            }
+        }
+        private void AddToFavoritesItem_Click(object sender, EventArgs e)
+        {
+            AddPageToFavorites();
+        }
+
+        private void FavoriteItem_Click(object sender, EventArgs e)
+        {
+            Favorite favorite = (Favorite)((ToolStripItem)sender).Tag;
+            webBrowser.Load(favorite.Url);
+        }
+
+        public string CurrentTitle;
+
+        private void AddPageToFavorites()
+        {
+            
+            FavoriteForm favoriteForm = new FavoriteForm()
+            {
+                Url = AddressBar.Text, // TODO bind it to web browsers url
+                Title = CurrentTitle // TODO bind to text
+            };
+            if (favoriteForm.ShowDialog() == DialogResult.OK) {
+                Favorite favorite = favoriteForm.Favorite;
+                favoriteManager.Favorites.Add(favorite);
+                SaveFavorites();
+                RenderFavoriteMenus();
+            }
+        }
+        public void RenderFavoriteMenus()
+        {
+            RenderFavoriteMenu(favoritesButton);
+            RenderFavoriteMenu(favoritesMenu);
+            RenderFavoriteToolStrip(favoritesToolStrip);
         }
 
         private void Pack()
@@ -213,6 +326,26 @@ namespace ClassicBrowser
         private void toolStripButton7_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Not implemented yet sorry!");
+        }
+
+        private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nyttFönsterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new ClassicBrowser().Show();
+        }
+
+        private void favoritesButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void favoritesToolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

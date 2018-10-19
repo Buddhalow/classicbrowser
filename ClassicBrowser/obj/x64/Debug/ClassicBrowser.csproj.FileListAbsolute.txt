@@ -97,3 +97,4 @@ C:\Users\Alecca\Documents\Apps\ClassicBrowser\ClassicBrowser\obj\x64\Debug\Class
 C:\Users\Alecca\Documents\Apps\ClassicBrowser\ClassicBrowser\obj\x64\Debug\ClassicBrowser.csproj.CopyComplete
 C:\Users\Alecca\Documents\Apps\ClassicBrowser\ClassicBrowser\obj\x64\Debug\ClassicBrowser.exe
 C:\Users\Alecca\Documents\Apps\ClassicBrowser\ClassicBrowser\obj\x64\Debug\ClassicBrowser.pdb
+C:\Users\Alecca\Documents\Apps\ClassicBrowser\ClassicBrowser\obj\x64\Debug\ClassicBrowser.FavoriteForm.resources

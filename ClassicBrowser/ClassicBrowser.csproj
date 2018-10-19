@@ -62,6 +62,9 @@
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -80,10 +83,21 @@
       <DependentUpon>ClassicBrowser.cs</DependentUpon>
     </Compile>
     <Compile Include="ClassicBrowserLifespanHandler.cs" />
+    <Compile Include="Favorite.cs" />
+    <Compile Include="FavoriteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FavoriteForm.Designer.cs">
+      <DependentUpon>FavoriteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Favorites.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ClassicBrowser.resx">
       <DependentUpon>ClassicBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FavoriteForm.resx">
+      <DependentUpon>FavoriteForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

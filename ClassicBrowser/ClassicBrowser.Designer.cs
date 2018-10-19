@@ -39,34 +39,14 @@
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.AddressBar = new System.Windows.Forms.ToolStripComboBox();
+            this.btnGo = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.goToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.favoritesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-            this.toolStripProgressBar2 = new System.Windows.Forms.ToolStripProgressBar();
-            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
-            this.toolStrip3 = new System.Windows.Forms.ToolStrip();
-            this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.forwardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.favoritesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.addToFavoritesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.organizeFavoritesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.favoritesButton = new System.Windows.Forms.ToolStripDropDownButton();
             this.addToFavoritesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.organizeFavoritesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -74,14 +54,38 @@
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
-            this.btnGo = new System.Windows.Forms.ToolStripButton();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nyttFönsterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.öppnaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.goToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.forwardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.favoritesMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.addToFavoritesToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.organizeFavoritesToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.toolStripProgressBar2 = new System.Windows.Forms.ToolStripProgressBar();
+            this.favoritesToolStrip = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.toolStrip2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
-            this.toolStripContainer1.ContentPanel.SuspendLayout();
+            this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
+            this.favoritesToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // imageList1
@@ -174,6 +178,15 @@
             this.AddressBar.Size = new System.Drawing.Size(575, 25);
             this.AddressBar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AddressBar_KeyDown);
             // 
+            // btnGo
+            // 
+            this.btnGo.Image = global::ClassicBrowser.Properties.Resources.Forward;
+            this.btnGo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnGo.Name = "btnGo";
+            this.btnGo.Size = new System.Drawing.Size(40, 22);
+            this.btnGo.Text = "Go";
+            this.btnGo.Click += new System.EventHandler(this.btnGo_Click);
+            // 
             // toolStrip1
             // 
             this.toolStrip1.BackColor = System.Drawing.SystemColors.Control;
@@ -184,7 +197,7 @@
             this.toolStripButton3,
             this.toolStripButton4,
             this.toolStripButton5,
-            this.toolStripDropDownButton1,
+            this.favoritesButton,
             this.toolStripLabel2,
             this.toolStripButton6,
             this.toolStripButton7,
@@ -197,186 +210,6 @@
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "Back";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.editToolStripMenuItem,
-            this.viewToolStripMenuItem,
-            this.goToolStripMenuItem,
-            this.favoritesToolStripMenuItem,
-            this.helpToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked_1);
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
-            this.fileToolStripMenuItem.Text = "File";
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.editToolStripMenuItem.Text = "Edit";
-            // 
-            // viewToolStripMenuItem
-            // 
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
-            this.viewToolStripMenuItem.Text = "View";
-            // 
-            // goToolStripMenuItem
-            // 
-            this.goToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.backToolStripMenuItem,
-            this.forwardToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.favoritesToolStripMenuItem1});
-            this.goToolStripMenuItem.Name = "goToolStripMenuItem";
-            this.goToolStripMenuItem.Size = new System.Drawing.Size(32, 20);
-            this.goToolStripMenuItem.Text = "Go";
-            // 
-            // favoritesToolStripMenuItem
-            // 
-            this.favoritesToolStripMenuItem.Name = "favoritesToolStripMenuItem";
-            this.favoritesToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
-            this.favoritesToolStripMenuItem.Text = "Favorites";
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
-            this.helpToolStripMenuItem.Text = "Help";
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.toolStripStatusLabel2,
-            this.toolStripProgressBar1,
-            this.toolStripProgressBar2});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 302);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(800, 22);
-            this.statusStrip1.TabIndex = 0;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(37, 17);
-            this.toolStripStatusLabel1.Text = "Online";
-            // 
-            // toolStripStatusLabel2
-            // 
-            this.toolStripStatusLabel2.AutoSize = false;
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(609, 17);
-            this.toolStripStatusLabel2.Text = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Click += new System.EventHandler(this.toolStripStatusLabel2_Click);
-            // 
-            // toolStripProgressBar1
-            // 
-            this.toolStripProgressBar1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripProgressBar1.AutoSize = false;
-            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(122, 16);
-            // 
-            // toolStripProgressBar2
-            // 
-            this.toolStripProgressBar2.Name = "toolStripProgressBar2";
-            this.toolStripProgressBar2.Size = new System.Drawing.Size(100, 15);
-            // 
-            // toolStripContainer1
-            // 
-            // 
-            // toolStripContainer1.ContentPanel
-            // 
-            this.toolStripContainer1.ContentPanel.Controls.Add(this.statusStrip1);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(800, 324);
-            this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
-            this.toolStripContainer1.Name = "toolStripContainer1";
-            this.toolStripContainer1.Size = new System.Drawing.Size(800, 450);
-            this.toolStripContainer1.TabIndex = 0;
-            this.toolStripContainer1.Text = "toolStripContainer1";
-            // 
-            // toolStripContainer1.TopToolStripPanel
-            // 
-            this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.menuStrip1);
-            this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip1);
-            this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip2);
-            this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip3);
-            this.toolStripContainer1.TopToolStripPanel.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            // 
-            // toolStrip3
-            // 
-            this.toolStrip3.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip3.Location = new System.Drawing.Point(0, 101);
-            this.toolStrip3.Name = "toolStrip3";
-            this.toolStrip3.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip3.Size = new System.Drawing.Size(800, 25);
-            this.toolStrip3.Stretch = true;
-            this.toolStrip3.TabIndex = 4;
-            this.toolStrip3.Text = "Favorites";
-            // 
-            // backToolStripMenuItem
-            // 
-            this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Left)));
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
-            this.backToolStripMenuItem.Text = "Back";
-            this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
-            // 
-            // forwardToolStripMenuItem
-            // 
-            this.forwardToolStripMenuItem.Name = "forwardToolStripMenuItem";
-            this.forwardToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Right)));
-            this.forwardToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
-            this.forwardToolStripMenuItem.Text = "Forward";
-            this.forwardToolStripMenuItem.Click += new System.EventHandler(this.forwardToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(164, 6);
-            // 
-            // favoritesToolStripMenuItem1
-            // 
-            this.favoritesToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addToFavoritesToolStripMenuItem1,
-            this.organizeFavoritesToolStripMenuItem1,
-            this.toolStripMenuItem2});
-            this.favoritesToolStripMenuItem1.Name = "favoritesToolStripMenuItem1";
-            this.favoritesToolStripMenuItem1.Size = new System.Drawing.Size(167, 22);
-            this.favoritesToolStripMenuItem1.Text = "Favorites";
-            // 
-            // addToFavoritesToolStripMenuItem1
-            // 
-            this.addToFavoritesToolStripMenuItem1.Name = "addToFavoritesToolStripMenuItem1";
-            this.addToFavoritesToolStripMenuItem1.Size = new System.Drawing.Size(163, 22);
-            this.addToFavoritesToolStripMenuItem1.Text = "Add to favorites";
-            // 
-            // organizeFavoritesToolStripMenuItem1
-            // 
-            this.organizeFavoritesToolStripMenuItem1.Name = "organizeFavoritesToolStripMenuItem1";
-            this.organizeFavoritesToolStripMenuItem1.Size = new System.Drawing.Size(163, 22);
-            this.organizeFavoritesToolStripMenuItem1.Text = "Organize favorites";
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(160, 6);
             // 
             // toolStripButton1
             // 
@@ -438,20 +271,21 @@
             this.toolStripButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
-            // toolStripDropDownButton1
+            // favoritesButton
             // 
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.favoritesButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addToFavoritesToolStripMenuItem,
             this.organizeFavoritesToolStripMenuItem,
             this.toolStripSeparator1});
-            this.toolStripDropDownButton1.Image = global::ClassicBrowser.Properties.Resources.Favorites;
-            this.toolStripDropDownButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(89, 49);
-            this.toolStripDropDownButton1.Text = "Favorites";
-            this.toolStripDropDownButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.favoritesButton.Image = global::ClassicBrowser.Properties.Resources.Favorites;
+            this.favoritesButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.favoritesButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.favoritesButton.Name = "favoritesButton";
+            this.favoritesButton.Padding = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.favoritesButton.Size = new System.Drawing.Size(89, 49);
+            this.favoritesButton.Text = "Favorites";
+            this.favoritesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.favoritesButton.Click += new System.EventHandler(this.favoritesButton_Click);
             // 
             // addToFavoritesToolStripMenuItem
             // 
@@ -516,14 +350,217 @@
             this.toolStripButton8.Text = "Fonts";
             this.toolStripButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
-            // btnGo
+            // menuStrip1
             // 
-            this.btnGo.Image = global::ClassicBrowser.Properties.Resources.Forward;
-            this.btnGo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnGo.Name = "btnGo";
-            this.btnGo.Size = new System.Drawing.Size(40, 22);
-            this.btnGo.Text = "Go";
-            this.btnGo.Click += new System.EventHandler(this.btnGo_Click);
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.editToolStripMenuItem,
+            this.viewToolStripMenuItem,
+            this.goToolStripMenuItem,
+            this.favoritesMenu,
+            this.helpToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked_1);
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nyttFönsterToolStripMenuItem,
+            this.öppnaToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // nyttFönsterToolStripMenuItem
+            // 
+            this.nyttFönsterToolStripMenuItem.Name = "nyttFönsterToolStripMenuItem";
+            this.nyttFönsterToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.nyttFönsterToolStripMenuItem.Text = "Nytt fönster";
+            this.nyttFönsterToolStripMenuItem.Click += new System.EventHandler(this.nyttFönsterToolStripMenuItem_Click);
+            // 
+            // öppnaToolStripMenuItem
+            // 
+            this.öppnaToolStripMenuItem.Name = "öppnaToolStripMenuItem";
+            this.öppnaToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.öppnaToolStripMenuItem.Text = "Öppna plats";
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.editToolStripMenuItem.Text = "Edit";
+            // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.viewToolStripMenuItem.Text = "View";
+            // 
+            // goToolStripMenuItem
+            // 
+            this.goToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.backToolStripMenuItem,
+            this.forwardToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.refreshToolStripMenuItem});
+            this.goToolStripMenuItem.Name = "goToolStripMenuItem";
+            this.goToolStripMenuItem.Size = new System.Drawing.Size(32, 20);
+            this.goToolStripMenuItem.Text = "Go";
+            // 
+            // backToolStripMenuItem
+            // 
+            this.backToolStripMenuItem.Name = "backToolStripMenuItem";
+            this.backToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Left)));
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.backToolStripMenuItem.Text = "Back";
+            this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
+            // 
+            // forwardToolStripMenuItem
+            // 
+            this.forwardToolStripMenuItem.Name = "forwardToolStripMenuItem";
+            this.forwardToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Right)));
+            this.forwardToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.forwardToolStripMenuItem.Text = "Forward";
+            this.forwardToolStripMenuItem.Click += new System.EventHandler(this.forwardToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(164, 6);
+            // 
+            // refreshToolStripMenuItem
+            // 
+            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+            this.refreshToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5;
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.refreshToolStripMenuItem.Text = "Refresh";
+            // 
+            // favoritesMenu
+            // 
+            this.favoritesMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addToFavoritesToolStripMenuItem2,
+            this.organizeFavoritesToolStripMenuItem2,
+            this.toolStripMenuItem3});
+            this.favoritesMenu.Name = "favoritesMenu";
+            this.favoritesMenu.Size = new System.Drawing.Size(64, 20);
+            this.favoritesMenu.Text = "Favorites";
+            // 
+            // addToFavoritesToolStripMenuItem2
+            // 
+            this.addToFavoritesToolStripMenuItem2.Name = "addToFavoritesToolStripMenuItem2";
+            this.addToFavoritesToolStripMenuItem2.Size = new System.Drawing.Size(163, 22);
+            this.addToFavoritesToolStripMenuItem2.Text = "Add to favorites";
+            // 
+            // organizeFavoritesToolStripMenuItem2
+            // 
+            this.organizeFavoritesToolStripMenuItem2.Name = "organizeFavoritesToolStripMenuItem2";
+            this.organizeFavoritesToolStripMenuItem2.Size = new System.Drawing.Size(163, 22);
+            this.organizeFavoritesToolStripMenuItem2.Text = "Organize favorites";
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(160, 6);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // toolStripContainer1
+            // 
+            // 
+            // toolStripContainer1.BottomToolStripPanel
+            // 
+            this.toolStripContainer1.BottomToolStripPanel.Controls.Add(this.statusStrip1);
+            // 
+            // toolStripContainer1.ContentPanel
+            // 
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(800, 302);
+            this.toolStripContainer1.ContentPanel.Load += new System.EventHandler(this.toolStripContainer1_ContentPanel_Load);
+            this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
+            this.toolStripContainer1.Name = "toolStripContainer1";
+            this.toolStripContainer1.Size = new System.Drawing.Size(800, 450);
+            this.toolStripContainer1.TabIndex = 0;
+            this.toolStripContainer1.Text = "toolStripContainer1";
+            // 
+            // toolStripContainer1.TopToolStripPanel
+            // 
+            this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.menuStrip1);
+            this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip1);
+            this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip2);
+            this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.favoritesToolStrip);
+            this.toolStripContainer1.TopToolStripPanel.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.toolStripStatusLabel2,
+            this.toolStripProgressBar1,
+            this.toolStripProgressBar2});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 0);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(800, 22);
+            this.statusStrip1.TabIndex = 1;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(37, 17);
+            this.toolStripStatusLabel1.Text = "Online";
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.AutoSize = false;
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(609, 17);
+            this.toolStripStatusLabel2.Text = "toolStripStatusLabel2";
+            // 
+            // toolStripProgressBar1
+            // 
+            this.toolStripProgressBar1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripProgressBar1.AutoSize = false;
+            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(122, 16);
+            // 
+            // toolStripProgressBar2
+            // 
+            this.toolStripProgressBar2.Name = "toolStripProgressBar2";
+            this.toolStripProgressBar2.Size = new System.Drawing.Size(100, 16);
+            // 
+            // favoritesToolStrip
+            // 
+            this.favoritesToolStrip.Dock = System.Windows.Forms.DockStyle.None;
+            this.favoritesToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel3});
+            this.favoritesToolStrip.Location = new System.Drawing.Point(0, 101);
+            this.favoritesToolStrip.Name = "favoritesToolStrip";
+            this.favoritesToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.favoritesToolStrip.Size = new System.Drawing.Size(800, 25);
+            this.favoritesToolStrip.Stretch = true;
+            this.favoritesToolStrip.TabIndex = 4;
+            this.favoritesToolStrip.Text = "Favorites";
+            this.favoritesToolStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.favoritesToolStrip_ItemClicked);
+            // 
+            // toolStripLabel3
+            // 
+            this.toolStripLabel3.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.toolStripLabel3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripLabel3.Name = "toolStripLabel3";
+            this.toolStripLabel3.Size = new System.Drawing.Size(60, 22);
+            this.toolStripLabel3.Text = "Favorites";
             // 
             // ClassicBrowser
             // 
@@ -532,6 +569,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.toolStripContainer1);
             this.Name = "ClassicBrowser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Web Browser";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Shown += new System.EventHandler(this.ClassicBrowser_Shown);
@@ -541,14 +579,16 @@
             this.toolStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
-            this.toolStripContainer1.ContentPanel.ResumeLayout(false);
-            this.toolStripContainer1.ContentPanel.PerformLayout();
+            this.toolStripContainer1.BottomToolStripPanel.ResumeLayout(false);
+            this.toolStripContainer1.BottomToolStripPanel.PerformLayout();
             this.toolStripContainer1.TopToolStripPanel.ResumeLayout(false);
             this.toolStripContainer1.TopToolStripPanel.PerformLayout();
             this.toolStripContainer1.ResumeLayout(false);
             this.toolStripContainer1.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
+            this.favoritesToolStrip.ResumeLayout(false);
+            this.favoritesToolStrip.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -571,7 +611,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripDropDownButton favoritesButton;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -579,27 +619,30 @@
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem goToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem favoritesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem favoritesMenu;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
-        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
-        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar2;
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;
-        private System.Windows.Forms.ToolStrip toolStrip3;
+        private System.Windows.Forms.ToolStrip favoritesToolStrip;
         private System.Windows.Forms.ToolStripMenuItem addToFavoritesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem organizeFavoritesToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem forwardToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem favoritesToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem addToFavoritesToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem organizeFavoritesToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripButton toolStripButton7;
         private System.Windows.Forms.ToolStripButton toolStripButton8;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
+        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar2;
+        private System.Windows.Forms.ToolStripMenuItem nyttFönsterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addToFavoritesToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem organizeFavoritesToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem öppnaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel3;
     }
 }
 
