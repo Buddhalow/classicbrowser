@@ -40,6 +40,7 @@ namespace ClassicBrowser
 
             
             webBrowser = new ChromiumWebBrowser(StartUrl);
+            webBrowser.RequestHandler = new ClassicRequestHandler();
             webBrowser.TitleChanged += WebBrowser_TitleChanged;
             webBrowser.AddressChanged += WebBrowser_AddressChanged;
             this.splitContainer1.Panel1Collapsed = true;

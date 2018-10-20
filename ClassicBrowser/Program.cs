@@ -16,7 +16,7 @@ namespace ClassicBrowser
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ClassicBrowser());
+            Application.Run(new XPBrowser());
         }
     }
 }
